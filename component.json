@@ -1,0 +1,27 @@
+{
+  "title": "Slack API (Java)",
+  "description": "elastic.io component for the Slack API",
+  "docsUrl": "https://github.com/elasticio/petstore-component-java",
+  "credentials": {
+    "fields": {
+      "apiKey": {
+        "label": "API key",
+        "required": true,
+        "viewClass": "TextFieldWithNoteView",
+        "note": "Please use <b>elasticio</b> as API key. For more details see <a href='https://petstore.elastic.io/docs/' target='_blank'>Petstore API docs</a>."
+      }
+    },
+    "verifier": "io.elastic.petstore.ApiKeyVerifier"
+  },
+  "actions": {
+    "createPet": {
+      "main": "de.telekom.idu.toa.SlackClient",
+      "title": "Send Message",
+      "description": "Sends a message to Slack",
+      "metadata": {
+        "in": "./schemas/createPet.in.json",
+        "out": "./schemas/createPet.out.json"
+      }
+    }
+  }
+}
