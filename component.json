@@ -17,7 +17,7 @@
     "createPet": {
       "main": "de.telekom.idu.toa.SendMessage",
       "title": "Send Message",
-      "description": "Sends a message to a Slack channel",
+      "description": "Sends a message to a Slack channel"
     }
   }
 }
