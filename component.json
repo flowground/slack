@@ -18,10 +18,6 @@
       "main": "de.telekom.idu.toa.SendMessage",
       "title": "Send Message",
       "description": "Sends a message to a Slack channel",
-      "metadata": {
-        "in": "./schemas/createPet.in.json",
-        "out": "./schemas/createPet.out.json"
-      }
     }
   }
 }
