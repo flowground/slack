@@ -22,6 +22,8 @@ public class SendMessage implements Module {
         System.setProperty("https.proxyHost", "HE103024.emea1.cds.t-internal.com");
         System.setProperty("https.proxyPort", "8080");
 
+        new SendMessage().execute(null);
+
     }
 
     @Override
