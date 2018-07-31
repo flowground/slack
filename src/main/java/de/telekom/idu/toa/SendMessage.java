@@ -26,18 +26,17 @@ public class SendMessage implements Module {
      *
      * @param args
      * @throws IOException
-     *
-    public static void main(String[] args) throws IOException {
-
-        System.setProperty("http.proxyHost", "HE103024.emea1.cds.t-internal.com");
-        System.setProperty("http.proxyPort", "8080");
-        System.setProperty("https.proxyHost", "HE103024.emea1.cds.t-internal.com");
-        System.setProperty("https.proxyPort", "8080");
-
-        new SendMessage().execute(null);
-
-    }
-    */
+     */
+//    public static void main(String[] args) throws IOException {
+//
+//        System.setProperty("http.proxyHost", "HE103024.emea1.cds.t-internal.com");
+//        System.setProperty("http.proxyPort", "8080");
+//        System.setProperty("https.proxyHost", "HE103024.emea1.cds.t-internal.com");
+//        System.setProperty("https.proxyPort", "8080");
+//
+//        new SendMessage().execute(null);
+//
+//    }
 
     /**
      *
