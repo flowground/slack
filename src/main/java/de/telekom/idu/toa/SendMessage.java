@@ -26,7 +26,7 @@ public class SendMessage implements Module {
      *
      * @param args
      * @throws IOException
-     */
+     *
     public static void main(String[] args) throws IOException {
 
         System.setProperty("http.proxyHost", "HE103024.emea1.cds.t-internal.com");
@@ -37,6 +37,7 @@ public class SendMessage implements Module {
         new SendMessage().execute(null);
 
     }
+    */
 
     /**
      *
