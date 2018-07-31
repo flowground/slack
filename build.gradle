@@ -4,7 +4,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'java-library-distribution'
 
-group 'de.telekom.idu.toa'
+group 'io.elastic'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
