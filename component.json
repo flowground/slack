@@ -1,13 +1,12 @@
 {
-  "title": "Slack API (Java)",
+  "title": "Slack API",
   "description": "elastic.io component for the Slack API",
   "docsUrl": "https://github.com/elasticio/petstore-component-java",
   "language": "java",
   "actions": {
     "sendMessage": {
-      "main": "de.telekom.idu.toa.SendMessage",
       "title": "Send Message",
-      "description": "Sends a message to a Slack channel",
+      "main": "de.telekom.idu.toa.SendMessage",
       "fields": {
         "channel": {
           "label": "channel",
