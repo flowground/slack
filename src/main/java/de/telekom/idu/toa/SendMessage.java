@@ -11,10 +11,22 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
+/**
+ *
+ */
 public class SendMessage implements Module {
 
+    /**
+     *
+     */
     private static final Logger logger = LoggerFactory.getLogger(SendMessage.class);
 
+
+    /**
+     *
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
 
         System.setProperty("http.proxyHost", "HE103024.emea1.cds.t-internal.com");
@@ -26,6 +38,10 @@ public class SendMessage implements Module {
 
     }
 
+    /**
+     *
+     * @param parameters
+     */
     @Override
     public void execute(ExecutionParameters parameters) {
 
