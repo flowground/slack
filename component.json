@@ -25,6 +25,18 @@
           "viewClass": "TextFieldView",
           "placeholder": "Username",
           "required": true
+        },
+        "slack_iconEmoji": {
+          "label": "Slack Emoji",
+          "viewClass": "TextFieldView",
+          "placeholder": "Emoji",
+          "required": false
+        },
+        "slack_text": {
+          "label": "Text",
+          "viewClass": "TextFieldView",
+          "placeholder": "Text",
+          "required": true
         }
       }
     }
