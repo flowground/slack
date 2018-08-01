@@ -47,14 +47,19 @@ public class SendMessage implements Module {
 
         logger.info("About to send a message to Slack");
 
-        String url = parameters.getConfiguration().getString("channel");
-        //" https://hooks.slack.com/services/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"; //System.getenv("SLACK_WEBHOOK_URL");
+        //" https://hooks.slack.com/services/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";
+        // System.getenv("SLACK_WEBHOOK_URL");
+        String url = parameters.getConfiguration().getString("slack_webhook_url");
+        String channel = parameters.getConfiguration().getString("slack_channel");
+        String username = parameters.getConfiguration().getString("slack_username");
+        String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji")
+        String text = parameters.getConfiguration().getString("slack_text");
 
         Payload payload = Payload.builder()
-                .channel("#allgemein")
-                .username("jSlack Bot")
-                .iconEmoji(":smile_cat:")
-                .text("Hello World!")
+                .channel(channel)
+                .username(username)
+                .iconEmoji(iconEmoji)
+                .text(text)
                 .build();
 
         Slack slack = Slack.getInstance();

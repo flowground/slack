@@ -8,10 +8,22 @@
       "title": "Send Message",
       "main": "de.telekom.idu.toa.SendMessage",
       "fields": {
-        "channel": {
-          "label": "channel",
+        "slack_webhook_url": {
+          "label": "Slack WebHook",
           "viewClass": "TextFieldView",
-          "placeholder": "channel",
+          "placeholder": "URL",
+          "required": true
+        },
+        "slack_channel": {
+          "label": "Slack Channel",
+          "viewClass": "TextFieldView",
+          "placeholder": "Channel",
+          "required": true
+        },
+        "slack_username": {
+          "label": "Slack Username",
+          "viewClass": "TextFieldView",
+          "placeholder": "Username",
           "required": true
         }
       }
