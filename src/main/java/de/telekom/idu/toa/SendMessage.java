@@ -21,23 +21,6 @@ public class SendMessage implements Module {
      */
     private static final Logger logger = LoggerFactory.getLogger(SendMessage.class);
 
-
-    /**
-     *
-     * @param args
-     * @throws IOException
-     */
-//    public static void main(String[] args) throws IOException {
-//
-//        System.setProperty("http.proxyHost", "HE103024.emea1.cds.t-internal.com");
-//        System.setProperty("http.proxyPort", "8080");
-//        System.setProperty("https.proxyHost", "HE103024.emea1.cds.t-internal.com");
-//        System.setProperty("https.proxyPort", "8080");
-//
-//        new SendMessage().execute(null);
-//
-//    }
-
     /**
      *
      * @param parameters
@@ -52,7 +35,7 @@ public class SendMessage implements Module {
         String url = parameters.getConfiguration().getString("slack_webhook_url");
         String channel = parameters.getConfiguration().getString("slack_channel");
         String username = parameters.getConfiguration().getString("slack_username");
-        String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji")
+        String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji");
         String text = parameters.getConfiguration().getString("slack_text");
 
         Payload payload = Payload.builder()
