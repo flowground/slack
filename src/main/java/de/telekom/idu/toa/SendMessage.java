@@ -54,6 +54,7 @@ public class SendMessage implements Module {
             parameters.getEventEmitter().emitException(e);
         }
 
+
         logger.info("Response Code: " + response.getCode());
 
         Message message = parameters.getMessage();
