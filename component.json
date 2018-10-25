@@ -1,6 +1,6 @@
 {
-  "title": "Slack API",
-  "description": "elastic.io component for the Slack API",
+  "title": "Slack",
+  "description": "elastic.io component for Slack",
   "docsUrl": "https://github.com/elasticio/petstore-component-java",
   "language": "java",
   "actions": {

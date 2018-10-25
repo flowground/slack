@@ -35,7 +35,7 @@ public class SendMessage implements Module {
         String url = parameters.getConfiguration().getString("slack_webhook_url");
         String channel = parameters.getConfiguration().getString("slack_channel");
         String username = parameters.getConfiguration().getString("slack_username");
-        String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji");
+        String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji", "");
         String text = parameters.getConfiguration().getString("slack_text");
 
         Payload payload = Payload.builder()
@@ -60,5 +60,6 @@ public class SendMessage implements Module {
         Message message = parameters.getMessage();
 
         parameters.getEventEmitter().emitData(message);
+
     }
 }
