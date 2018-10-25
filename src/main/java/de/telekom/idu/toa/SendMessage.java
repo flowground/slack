@@ -22,7 +22,6 @@ public class SendMessage implements Module {
     private static final Logger logger = LoggerFactory.getLogger(SendMessage.class);
 
     /**
-     *
      * @param parameters
      */
     @Override
@@ -37,13 +36,13 @@ public class SendMessage implements Module {
         String username = parameters.getConfiguration().getString("slack_username");
         String text = parameters.getConfiguration().getString("slack_text");
 
-        String iconEmoji =parameters.getConfiguration().getString("slack_icon_emoji");
+        //String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji");
 
         Payload payload = Payload.builder()
                 .channel(channel)
                 .username(username)
                 .text(text)
-                .iconEmoji(iconEmoji)
+                .iconEmoji(":smile_cat:")
                 .build();
 
         Slack slack = Slack.getInstance();
