@@ -37,25 +37,14 @@ public class SendMessage implements Module {
         String username = parameters.getConfiguration().getString("slack_username");
         String text = parameters.getConfiguration().getString("slack_text");
 
-        String iconEmoji = null;
-        try {
-            iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji");
-            logger.info("Icon Emoji: " + iconEmoji);
-        } catch (NullPointerException npe) {
-            // do nothing
-            logger.info("No Icon Emoji found.");
-        }
+        //String iconEmoji =parameters.getConfiguration().getString("slack_icon_emoji");
 
         Payload payload = Payload.builder()
                 .channel(channel)
                 .username(username)
                 .text(text)
+                //.iconEmoji(iconEmoji)
                 .build();
-
-        if(iconEmoji != null) {
-            logger.info("Adding iconEmoji to payload.");
-            payload.setIconEmoji(iconEmoji);
-        }
 
         Slack slack = Slack.getInstance();
         WebhookResponse response = null;
