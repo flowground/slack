@@ -38,9 +38,12 @@ public class SendMessage implements Module {
         String text = parameters.getConfiguration().getString("slack_text");
 
         String iconEmoji = null;
-        if(parameters.getConfiguration().containsKey("slack_icon_emoji")) {
-            iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji", "");
-            logger.info("Icon emoji: " + iconEmoji);
+        try {
+            iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji");
+            logger.info("Icon Emoji: " + iconEmoji);
+        } catch (NullPointerException npe) {
+            // do nothing
+            logger.info("No Icon Emoji found.");
         }
 
         Payload payload = Payload.builder()
@@ -50,6 +53,7 @@ public class SendMessage implements Module {
                 .build();
 
         if(iconEmoji != null) {
+            logger.info("Adding iconEmoji to payload.");
             payload.setIconEmoji(iconEmoji);
         }
 
