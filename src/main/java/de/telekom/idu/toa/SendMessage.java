@@ -38,7 +38,7 @@ public class SendMessage implements Module {
         String text = parameters.getConfiguration().getString("slack_text");
 
         String iconEmoji = null;
-        if(parameters.getConfiguration().containsValue("slack_icon_emoji")) {
+        if(parameters.getConfiguration().containsKey("slack_icon_emoji")) {
             iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji", "");
             logger.info("Icon emoji: " + iconEmoji);
         }
@@ -58,17 +58,13 @@ public class SendMessage implements Module {
         try {
             response = slack.send(url, payload);
         } catch (IOException e) {
-            e.printStackTrace();
             parameters.getEventEmitter().emitException(e);
         }
-
 
         logger.info("Response Code: " + response.getCode());
 
         Message message = parameters.getMessage();
 
         parameters.getEventEmitter().emitData(message);
-
     }
-
 }
