@@ -38,7 +38,7 @@ public class SendMessage implements Module {
         String text = parameters.getConfiguration().getString("slack_text");
 
         String iconEmoji = null;
-        if(parameters.getConfiguration().containsKey("slack_icon_emoji")) {
+        if(parameters.getConfiguration().containsValue("slack_icon_emoji")) {
             iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji", "");
             logger.info("Icon emoji: " + iconEmoji);
         }
@@ -70,4 +70,5 @@ public class SendMessage implements Module {
         parameters.getEventEmitter().emitData(message);
 
     }
+
 }
