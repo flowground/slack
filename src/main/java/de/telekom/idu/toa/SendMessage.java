@@ -40,6 +40,7 @@ public class SendMessage implements Module {
         String iconEmoji = null;
         if(parameters.getConfiguration().containsKey("slack_icon_emoji")) {
             iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji", "");
+            logger.info("Icon emoji: " + iconEmoji);
         }
 
         Payload payload = Payload.builder()
