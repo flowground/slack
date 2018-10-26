@@ -26,12 +26,6 @@
           "placeholder": "Username",
           "required": true
         },
-        "slack_icon_emoji": {
-          "label": "Slack Emoji",
-          "viewClass": "TextFieldView",
-          "placeholder": "Emoji",
-          "required": true
-        },
         "slack_text": {
           "label": "Text",
           "viewClass": "TextFieldView",
