@@ -36,13 +36,13 @@ public class SendMessage implements Module {
         String username = parameters.getConfiguration().getString("slack_username");
         String text = parameters.getConfiguration().getString("slack_text");
 
-//        String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji");
+        String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji");
 
         Payload payload = Payload.builder()
                 .channel(channel)
                 .username(username)
                 .text(text)
-//                .iconEmoji(iconEmoji)
+                .iconEmoji(iconEmoji)
                 .build();
 
         Slack slack = Slack.getInstance();
