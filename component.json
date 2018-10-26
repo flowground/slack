@@ -26,11 +26,11 @@
           "placeholder": "Username",
           "required": true
         },
-        "slack_iconEmoji": {
+        "slack_icon_emoji": {
           "label": "Slack Emoji",
           "viewClass": "TextFieldView",
           "placeholder": "Emoji",
-          "required": false
+          "required": true
         },
         "slack_text": {
           "label": "Text",
