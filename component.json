@@ -7,37 +7,8 @@
     "sendMessage": {
       "title": "Send Message",
       "main": "de.telekom.idu.toa.SendMessage",
-      "fields": {
-        "slack_webhook_url": {
-          "label": "Slack WebHook",
-          "viewClass": "TextFieldView",
-          "placeholder": "URL",
-          "required": true
-        },
-        "slack_channel": {
-          "label": "Slack Channel",
-          "viewClass": "TextFieldView",
-          "placeholder": "Channel",
-          "required": true
-        },
-        "slack_username": {
-          "label": "Slack Username",
-          "viewClass": "TextFieldView",
-          "placeholder": "Username",
-          "required": true
-        },
-        "slack_icon_emoji": {
-          "label": "Slack Emoji",
-          "viewClass": "TextFieldView",
-          "placeholder": "Emoji",
-          "required": true
-        },
-        "slack_text": {
-          "label": "Text",
-          "viewClass": "TextFieldView",
-          "placeholder": "Text",
-          "required": true
-        }
+      "metadata": {
+        "in": "./schemas/sendMessage.in.json"
       }
     }
   }
