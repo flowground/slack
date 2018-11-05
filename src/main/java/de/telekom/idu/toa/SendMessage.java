@@ -9,6 +9,7 @@ import io.elastic.api.Module;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.json.JsonObject;
 import java.io.IOException;
 
 /**
@@ -25,12 +26,18 @@ public class SendMessage implements Module {
      * @param parameters
      */
     @Override
-    public void execute(ExecutionParameters parameters) {
+    public void execute(final ExecutionParameters parameters) {
 
         logger.info("About to send a message to Slack");
 
         //" https://hooks.slack.com/services/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";
-        // System.getenv("SLACK_WEBHOOK_URL");
+
+        logger.info(parameters.getConfiguration().toString());
+
+        JsonObject slackParameters = parameters.getMessage().getBody();
+
+        logger.info(slackParameters.toString());
+
         String url = parameters.getConfiguration().getString("slack_webhook_url");
         String channel = parameters.getConfiguration().getString("slack_channel");
         String username = parameters.getConfiguration().getString("slack_username");

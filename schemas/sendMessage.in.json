@@ -4,32 +4,27 @@
   "properties": {
     "slack_webhook_url": {
       "type": "string",
-      "label": "Slack WebHook",
-      "placeholder": "URL",
+      "title": "Slack WebHook",
       "required": true
     },
     "slack_channel": {
       "type": "string",
-      "label": "Slack Channel",
-      "placeholder": "Channel",
+      "title": "Slack Channel",
       "required": true
     },
     "slack_username": {
-      "label": "Slack Username",
+      "title": "Slack Username",
       "type": "string",
-      "placeholder": "Username",
       "required": false
     },
     "slack_icon_emoji": {
-      "label": "Slack Emoji",
+      "title": "Slack Emoji",
       "type": "string",
-      "placeholder": "Emoji",
       "required": false
     },
     "slack_text": {
-      "label": "Text",
+      "title": "Text",
       "type": "string",
-      "placeholder": "Text",
       "required": true
     }
   }
