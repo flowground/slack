@@ -32,25 +32,31 @@ public class SendMessage implements Module {
 
         //" https://hooks.slack.com/services/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";
 
-        logger.info(parameters.getConfiguration().toString());
-
         JsonObject slackParameters = parameters.getMessage().getBody();
 
         logger.info(slackParameters.toString());
 
-        String url = parameters.getConfiguration().getString("slack_webhook_url");
-        String channel = parameters.getConfiguration().getString("slack_channel");
-        String username = parameters.getConfiguration().getString("slack_username");
-        String text = parameters.getConfiguration().getString("slack_text");
+        String url = slackParameters.getString("slack_webhook_url");
+        String channel = slackParameters.getString("slack_channel");
+        String text = slackParameters.getString("slack_text");
 
-        String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji");
-
-        Payload payload = Payload.builder()
+        Payload.PayloadBuilder payloadBuilder = Payload.builder()
                 .channel(channel)
-                .username(username)
-                .text(text)
-                .iconEmoji(iconEmoji)
-                .build();
+                .text(text);
+
+        if (slackParameters.containsKey("slack_username")) {
+            String username = slackParameters.getString("slack_username");
+            logger.info("Setting username to: " + username);
+            payloadBuilder.username(username);
+        }
+
+        if (slackParameters.containsKey("slack_icon_emoji")) {
+            String iconEmoji = parameters.getConfiguration().getString("slack_icon_emoji");
+            logger.info("Setting iconEmoji to: " + iconEmoji);
+            payloadBuilder.iconEmoji(iconEmoji);
+        }
+
+        Payload payload = payloadBuilder.build();
 
         Slack slack = Slack.getInstance();
         WebhookResponse response = null;
