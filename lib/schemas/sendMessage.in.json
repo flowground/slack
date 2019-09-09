@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "required": true,
+  "properties": {
+    "slack_webhook_url": {
+      "type": "string",
+      "title": "Slack WebHook",
+      "required": true
+    },
+    "slack_channel": {
+      "type": "string",
+      "title": "Slack Channel",
+      "required": true
+    },
+    "slack_username": {
+      "title": "Slack Username",
+      "type": "string",
+      "required": false
+    },
+    "slack_icon_emoji": {
+      "title": "Slack Emoji",
+      "type": "string",
+      "required": false
+    },
+    "slack_text": {
+      "title": "Text",
+      "type": "string",
+      "required": true
+    }
+  }
+}
