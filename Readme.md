@@ -11,9 +11,9 @@ The connector requires neither ENV variables nor Credentials to be configured.
 
 The component contains only one action for sending mails:
 ```shell
-SendMessage.java
+sendMessage.js
 ```
 
-### SendMessage.java
+### sendMessage.js
 
 Actions that sends a message to Slack using various parameters to be set during flow configuration. The action allows to set the WebHook URL, Slack Channel, Username, Emoji and Text to be set.

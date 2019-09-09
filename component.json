@@ -1,12 +1,11 @@
 {
   "title": "Slack",
   "description": "elastic.io component for Slack",
-  "docsUrl": "https://github.com/elasticio/petstore-component-java",
-  "language": "java",
   "actions": {
     "sendMessage": {
       "title": "Send Message",
-      "main": "de.telekom.idu.toa.SendMessage",
+      "description":"Sends out a Slack message.",
+      "main": ".lib/actions/sendMessage.js",
       "metadata": {
         "in": "./schemas/sendMessage.in.json"
       }
