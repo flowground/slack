@@ -7,7 +7,7 @@
       "description":"Sends out a Slack message.",
       "main": ".lib/actions/sendMessage.js",
       "metadata": {
-        "in": "./schemas/sendMessage.in.json"
+        "in": "./lib/schemas/sendMessage.in.json"
       }
     }
   }
