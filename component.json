@@ -5,7 +5,7 @@
     "sendMessage": {
       "title": "Send Message",
       "description":"Sends out a Slack message.",
-      "main": ".lib/actions/sendMessage.js",
+      "main": "./lib/actions/sendMessage.js",
       "metadata": {
         "in": "./lib/schemas/sendMessage.in.json"
       }
