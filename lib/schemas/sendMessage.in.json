@@ -3,7 +3,7 @@
   "required": true,
   "properties": {
     "slack_webhook_url": {
-      "type": "string",
+      "type": "password",
       "title": "Slack WebHook",
       "required": true
     },
@@ -13,18 +13,13 @@
       "required": true
     },
     "slack_username": {
+      "type": "string",
       "title": "Slack Username",
-      "type": "string",
-      "required": false
-    },
-    "slack_icon_emoji": {
-      "title": "Slack Emoji",
-      "type": "string",
       "required": false
     },
     "slack_text": {
-      "title": "Text",
       "type": "string",
+      "title": "Text",
       "required": true
     }
   }
