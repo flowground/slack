@@ -17,6 +17,11 @@
       "title": "Slack Username",
       "required": false
     },
+    "slack_icon_emoji": {
+      "title": "Slack Emoji",
+      "type": "string",
+      "required": false
+    },
     "slack_text": {
       "type": "string",
       "title": "Text",
