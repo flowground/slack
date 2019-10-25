@@ -18,7 +18,7 @@
       "required": false
     },
     "slack_icon_emoji": {
-      "title": "Slack Emoji",
+      "title": "Slack Emoji2",
       "type": "string",
       "required": false
     },
