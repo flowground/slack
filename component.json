@@ -1,6 +1,7 @@
 {
   "title": "Slack",
   "description": "elastic.io component for Slack",
+  "buildType": "docker", 
   "actions": {
     "sendMessage": {
       "title": "Send Message",
