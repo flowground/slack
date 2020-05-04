@@ -1,5 +1,5 @@
 {
-    "name": "eio.slack",
+    "name": "the-slack-connector",
     "version": "1.0.0",
     "description": "flowground integration connector for Slack",
     "author": {
